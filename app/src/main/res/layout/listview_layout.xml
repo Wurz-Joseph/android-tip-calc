@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/custom_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"
+            android:background="@drawable/minus" />
+        <TextView
+            android:id="@+id/text1"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/color_black"
+            android:gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$25.98"
+        android:textSize="18sp"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="center"
+        android:textColor="#016E01"/>
+</LinearLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <!-- Here you put the rest of your current view-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.my.tipjar.MainActivity">
+
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="108dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorAccent"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/setTextTotal"
+            app:layout_constraintTop_toBottomOf="@+id/tipAmountTextView" />
+
+        <TextView
+            android:id="@+id/tipAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="108dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorAccent"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/setTextTip"
+            app:layout_constraintTop_toBottomOf="@+id/calcBtn" />
+
+        <TextView
+            android:id="@+id/setTextTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorAccent"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/totalTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setTextTip" />
+
+        <TextView
+            android:id="@+id/setTextTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="1dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorAccent"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/setTextTotal"
+            app:layout_constraintEnd_toStartOf="@+id/tipAmountTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcBtn" />
+
+        <Button
+            android:id="@+id/saveDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/save_background"
+            android:enabled="false"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/totalTextView"
+            tools:visibility="invisible" />
+
+        <Button
+            android:id="@+id/calcBtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button"
+            android:enabled="false"
+            android:fontFamily="@font/allerta_stencil"
+            android:padding="8dp"
+            android:text="Calculate"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roundDownCheck" />
+
+        <EditText
+            android:id="@+id/baseAmountEditText"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape"
+            android:ems="10"
+            android:hint="Check Amount"
+            android:maxLength="9"
+            android:inputType="numberDecimal"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="#787875"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="50dp"
+            android:background="#0E0D0D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/baseAmountEditText">
+
+            <RadioButton
+                android:id="@+id/radio5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/colorAccent"
+                android:padding="8sp"
+                android:text="5%"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/radio10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:buttonTint="@color/colorAccent"
+                android:padding="8sp"
+                android:text="10%"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/radio15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:buttonTint="@color/colorAccent"
+                android:padding="8sp"
+                android:text="15%"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/radio20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:buttonTint="@color/colorAccent"
+                android:checked="true"
+                android:padding="8sp"
+                android:text="20%"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/customAmountEditText"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:ems="10"
+                android:hint="@string/custom_amount"
+                android:maxLength="9"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="#787875"
+                android:textSize="24sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/historyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/allerta_stencil"
+            android:padding="8dp"
+            android:text="History"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/roundUpCheck"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/colorAccent"
+            android:padding="5sp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:text="Round Up"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <CheckBox
+            android:id="@+id/roundDownCheck"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorAccent"
+            android:padding="5sp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:text="Round Down"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roundUpCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
